@@ -6,7 +6,8 @@ import pickle
 from sklearn.datasets import load_iris
 from sklearn.linear_model import LogisticRegression # for example
 
-MODEL_FILEPATH = os.path.join(os.path.dirname(__file__),"routes", "stats_models", "latest_model.pkl")
+#MODEL_FILEPATH = os.path.join(os.path.dirname(__file__), "../routes", "stats_models", "latest_model.pkl")
+MODEL_FILEPATH =  os.path.join(os.path.dirname(__file__),os.curdir,"routes","stats_models")
 #web_app\iris_classifier.py
 #web_app\routes\stats_models.py
 #C:\Users\sseng\OneDrive\Desktop\Lambda\projects\twittoff-ssg\web_app\routes\stats_models.py,"latest_model.pkl"
