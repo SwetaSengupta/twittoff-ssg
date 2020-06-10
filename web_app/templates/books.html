@@ -1,29 +1,46 @@
+<!-- web_app/templates/books.html -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
-    <div class="alert alert-primary" role="alert">
-       <h2> Welcome to the Books Page</h2>
-      </div>
-      
+<body-->
+    {% extends "bootstrap_layout.html" %}
+{% set active_page = "books" %}
+
+{% block title %}
+    <title>Books Page</title>
+{% endblock %}
+
+{% block content %}
     
+    <div class="alert alert-primary" role="alert">
+        <h2> Welcome to the Books Page</h2>
+    </div>
+
+
 
     <p>{{ message }}</p>
 
     {% if books %}
-        <ul>
+    <ul>
         {% for book in books %}
-            <li>{{ book["title"] }}</li>
+        <li>{{ book["title"] }}</li>
         {% endfor %}
-        </ul>
+    </ul>
 
     {% else %}
-        <p>Books not found.</p>
+    <p>Books not found.</p>
     {% endif %}
-</body>
-</html>
+    
+    {% endblock %}
+    
+#</script>
+   #</body>
+   #</html>

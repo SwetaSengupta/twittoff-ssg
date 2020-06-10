@@ -1,7 +1,7 @@
 # web_app/routes/home_routes.py
 # how to set and run flask - https://github.com/Microsoft/vscode-docs/issues/1881
 
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 home_routes = Blueprint("home_routes", __name__)
 

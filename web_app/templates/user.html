@@ -1,28 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+#<!DOCTYPE html>
+#<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
+#<head>
+    <!meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Twitter Account Information</title>
-</head>
-
-<body>
     
-    <div class="alert alert-primary" role="alert">
-        <h2>Twitter User: {{ user.screen_name }} </h2>
-    </div>
-    <div class="alert alert-info" role="alert">
-        <h4>Name: {{ user.name }}</h4>
-    </div>
-    <div class="alert alert-warning" role="alert">
-        <h4>Location: {{ user.location }}</h4>
-    </div>
+    </head>
+<body>-->
+    {% extends "bootstrap_layout.html" %}
+{ set active_page = "user_show" }
+
+{% block content %}
     <div class="alert alert-dark" role="alert">
-        <h4>Followers: {{ user.followers_count }}</h4>
-    </div>
+        <h2>Twitter User: {{ user.screen_name }} </h2>
+    
+    <div class="alert alert-success" role="alert">
+        <h5>Name: {{ user.name }}</h5>
+  
+    <div class="alert alert-danger" role="alert">
+        <h5>Location: {{ user.location }}</h5>
+    
+    <div class="alert alert-warning" role="alert">
+        <h5>Followers: {{ user.followers_count }}</h5>
+
+        <div class="alert alert-info" role="alert">  
+        <h5>List of tweets</h5>
+    
 
     {% if tweets %}
     <ul>
@@ -34,7 +40,7 @@
     {% else %}
     <p>No tweets found.</p>
     {% endif %}
+    {% endblock %}
+#</body>
 
-</body>
-
-</html>
+#</html>
